@@ -11,31 +11,23 @@ Deskripsi singkat proyek.
 
 ## Cara Install
 
-   ```bash
-1. Lakukan Clone repositori ini:
+1. Clone repositori ini:
    git clone https://github.com/ainurrafi2123/UKL_BE_Presensi_Paket2.git
 
 2. Masuk ke direktori proyek:
-   cd nama-proyek
-   
-3.Install dependensi menggunakan Composer:
+   cd UKL_BE_Presensi_Paket2
+
+3. Install dependensi menggunakan Composer:
    composer install
 
-4.Salin file .env.example menjadi .env:
+4. Salin file `.env.example` menjadi `.env`:
    cp .env.example .env
 
-5.Generate kunci aplikasi:
+5. Generate kunci aplikasi:
    php artisan key:generate
 
-6.Jalankan migrasi database::
+6. Jalankan migrasi database:
    php artisan migrate
 
-7.Jalankan server:
+7. Jalankan server:
    php artisan serve
-
-
-
-
-
-
-
