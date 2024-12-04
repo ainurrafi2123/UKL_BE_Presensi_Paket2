@@ -39,6 +39,9 @@ Aplikasi Presensi Online ini adalah solusi untuk mempermudah proses presensi dan
 4. Salin file `.env.example` menjadi `.env`:
    ```bash
    cp .env.example .env
+   lakukan pada command:
+   php artisan jwt:secret
+
 
 5. Generate kunci aplikasi:
    ```bash
