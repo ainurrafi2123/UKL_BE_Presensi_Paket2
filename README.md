@@ -23,26 +23,33 @@ Aplikasi Presensi Online ini adalah solusi untuk mempermudah proses presensi dan
 - MySQL (atau database lainnya)
 
 ## Cara Install
-
+ 
 1. Clone repositori ini:
+   ```bash
    git clone https://github.com/ainurrafi2123/UKL_BE_Presensi_Paket2.git
 
 2. Masuk ke direktori proyek:
+   ```bash
    cd UKL_BE_Presensi_Paket2
 
 3. Install dependensi menggunakan Composer:
+   ```bash
    composer install
 
 4. Salin file `.env.example` menjadi `.env`:
+   ```bash
    cp .env.example .env
 
 5. Generate kunci aplikasi:
+   ```bash
    php artisan key:generate
 
 6. Jalankan migrasi database:
+   ```bash
    php artisan migrate
 
 7. Jalankan server:
+   ```bash
    php artisan serve
 
 ## Dokumentasi API
@@ -56,6 +63,7 @@ Aplikasi Presensi Online ini adalah solusi untuk mempermudah proses presensi dan
       "name": "Nama Pengguna",
       "email": "email@example.com",
       "password": "password123",
+      "password_confirmation": "password123",
       "role": "siswa|karyawan"
     }
     ```
@@ -63,7 +71,12 @@ Aplikasi Presensi Online ini adalah solusi untuk mempermudah proses presensi dan
   - **Contoh Response**:
     ```json
     {
-      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.Mk3cLvn7gEdi..." 
+    "success": true,
+    "user": {
+        "name": "jada",
+        "username": "amin",
+        "role": "siswa",
+        "id": 7
     }
     ```
 
@@ -71,7 +84,7 @@ Aplikasi Presensi Online ini adalah solusi untuk mempermudah proses presensi dan
   - **Body Request**:
     ```json
     {
-      "email": "email@example.com",
+      "username": "Iku",
       "password": "password123"
     }
     ```
@@ -79,8 +92,17 @@ Aplikasi Presensi Online ini adalah solusi untuk mempermudah proses presensi dan
   - **Contoh Response**:
     ```json
     {
-      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.Mk3cLvn7gEdi..."
+        {
+        "success": true,
+        "user": {
+            "id": 3,
+            "name": "Yuki",
+            "username": "yuks",
+            "role": "karyawan"
+        },
+        "token": "exxxxx"
     }
+
     ```
 
 - **POST** `/api/logout` - Untuk logout dan menghapus token
