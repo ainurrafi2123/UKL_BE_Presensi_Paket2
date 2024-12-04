@@ -10,7 +10,7 @@ Deskripsi singkat proyek.
 - MySQL (atau database lainnya)
 
 ## Cara Install
-
+   ```bash
 1. Clone repositori ini:
    git clone https://github.com/ainurrafi2123/UKL_BE_Presensi_Paket2.git
 
